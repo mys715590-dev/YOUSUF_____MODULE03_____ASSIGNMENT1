@@ -1,0 +1,49 @@
+{
+    "target": "EstimatedSalary",
+    "features": [
+        "CreditScore",
+        "Age",
+        "Tenure",
+        "Balance",
+        "NumOfProducts",
+        "HasCrCard",
+        "IsActiveMember",
+        "Geography",
+        "Gender"
+    ],
+    "excluded_columns": [
+        "RowNumber",
+        "CustomerId",
+        "Surname",
+        "Exited"
+    ],
+    "train_rows": 8000,
+    "test_rows": 2000,
+    "models": {
+        "Balanced ANN": {
+            "MAE": 49819.663726875006,
+            "RMSE": 57537.45462506769,
+            "R2": -0.002818750770050782,
+            "epochs_trained": 22
+        },
+        "Deep ANN": {
+            "MAE": 50030.06946328125,
+            "RMSE": 57814.80716532017,
+            "R2": -0.01250999229894112,
+            "epochs_trained": 24
+        },
+        "Wide ANN": {
+            "MAE": 49960.5449465625,
+            "RMSE": 57728.119572647054,
+            "R2": -0.009475951182913445,
+            "epochs_trained": 21
+        }
+    },
+    "median_baseline": {
+        "MAE": 49782.14112,
+        "RMSE": 57483.534944462626,
+        "R2": -0.0009401021161192791
+    },
+    "best_architecture_by_MAE": "Balanced ANN",
+    "note": "Educational exercise only. Not a production salary-estimation claim."
+}
